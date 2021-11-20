@@ -42,7 +42,7 @@
  					<img class='img-circle profile-img' height=110 width=120 src='images/".$_SESSION['pic']."'>
  				</div>";
  			?>
- 			<div style="text-align: center;"> <b>Welcome, </b>
+ 			<div style="text-align: center;"> <b>---Welcome--- </b>
 	 			<h4>
 	 				<?php echo $_SESSION['login_user']; ?>
 	 			</h4>
@@ -80,10 +80,10 @@
 
 	 				echo "<tr>";
 	 					echo "<td>";
-	 						echo "<b> Password: </b>";
+	 						echo "<b> User ID: </b>";	
 	 					echo "</td>";
 	 					echo "<td>";
-	 						echo $row['password'];
+	 						echo $row['user_id'];
 	 					echo "</td>";
 	 				echo "</tr>";
 

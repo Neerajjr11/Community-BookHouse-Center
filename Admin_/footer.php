@@ -64,18 +64,18 @@
 
 	<div style="margin:0px 570px;">
 
-		<a href="#" class="fa fa-facebook"></a>
-		<a href="#" class="fa fa-twitter"></a>
-		<a href="#" class="fa fa-google"></a>
-		<a href="#" class="fa fa-instagram"></a>
-		<a href="#" class="fa fa-yahoo"></a>
+		<a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+		<a href="https://twitter.com/?lang=en" class="fa fa-twitter"></a>
+		<a href="https://www.google.co.in/" class="fa fa-google"></a>
+		<a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+		<a href="https://in.search.yahoo.com/?fr2=inr" class="fa fa-yahoo"></a>
 	</div>
 
 	<br>
 	<p style="color:white;text-align: center;">
 		<br>
-		Email:&nbsp Online.library@gmail.com <br><br>
-		Mobile:&nbsp &nbsp +880171*******
+		Email:&nbsp cbms@gmail.com <br><br>
+		Mobile:&nbsp &nbsp +919876543210
 	</p>
 </footer>
 </body>

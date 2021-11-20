@@ -163,7 +163,7 @@ function closeNav() {
 				echo "<th>"; echo "Edition";  echo "</th>";
 				echo "<th>"; echo "Status";  echo "</th>";
 				echo "<th>"; echo "Quantity";  echo "</th>";
-				echo "<th>"; echo "Department";  echo "</th>";
+				echo "<th>"; echo "Category";  echo "</th>";
 			echo "</tr>";	
 
 			while($row=mysqli_fetch_assoc($q))
@@ -175,7 +175,7 @@ function closeNav() {
 				echo "<td>"; echo $row['edition']; echo "</td>";
 				echo "<td>"; echo $row['status']; echo "</td>";
 				echo "<td>"; echo $row['quantity']; echo "</td>";
-				echo "<td>"; echo $row['department']; echo "</td>";
+				echo "<td>"; echo $row['category']; echo "</td>";
 
 				echo "</tr>";
 			}
@@ -196,7 +196,7 @@ function closeNav() {
 				echo "<th>"; echo "Edition";  echo "</th>";
 				echo "<th>"; echo "Status";  echo "</th>";
 				echo "<th>"; echo "Quantity";  echo "</th>";
-				echo "<th>"; echo "Department";  echo "</th>";
+				echo "<th>"; echo "Category";  echo "</th>";
 			echo "</tr>";	
 
 			while($row=mysqli_fetch_assoc($res))
@@ -208,7 +208,7 @@ function closeNav() {
 				echo "<td>"; echo $row['edition']; echo "</td>";
 				echo "<td>"; echo $row['status']; echo "</td>";
 				echo "<td>"; echo $row['quantity']; echo "</td>";
-				echo "<td>"; echo $row['department']; echo "</td>";
+				echo "<td>"; echo $row['category']; echo "</td>";
 
 				echo "</tr>";
 			}

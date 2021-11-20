@@ -215,18 +215,18 @@ th,td
         if(isset($_POST['submit2']))
         {
           
-        $sql="SELECT student.username,roll,books.bid,name,authors,edition,approve,issue,issue_book.return FROM student inner join issue_book ON student.username=issue_book.username inner join books ON issue_book.bid=books.bid WHERE issue_book.approve ='$ret' ORDER BY `issue_book`.`return` DESC";
+        $sql="SELECT student.username,user_id,books.bid,name,authors,edition,approve,issue,issue_book.return FROM student inner join issue_book ON student.username=issue_book.username inner join books ON issue_book.bid=books.bid WHERE issue_book.approve ='$ret' ORDER BY `issue_book`.`return` DESC";
         $res=mysqli_query($db,$sql);
 
         }
         else if(isset($_POST['submit3']))
         {
-        $sql="SELECT student.username,roll,books.bid,name,authors,edition,approve,issue,issue_book.return FROM student inner join issue_book ON student.username=issue_book.username inner join books ON issue_book.bid=books.bid WHERE issue_book.approve ='$exp' ORDER BY `issue_book`.`return` DESC";
+        $sql="SELECT student.username,user_id,books.bid,name,authors,edition,approve,issue,issue_book.return FROM student inner join issue_book ON student.username=issue_book.username inner join books ON issue_book.bid=books.bid WHERE issue_book.approve ='$exp' ORDER BY `issue_book`.`return` DESC";
         $res=mysqli_query($db,$sql);
         }
         else
         {
-        $sql="SELECT student.username,roll,books.bid,name,authors,edition,approve,issue,issue_book.return FROM student inner join issue_book ON student.username=issue_book.username inner join books ON issue_book.bid=books.bid WHERE issue_book.approve !='' and issue_book.approve !='Yes' ORDER BY `issue_book`.`return` DESC";
+        $sql="SELECT student.username,user_id,books.bid,name,authors,edition,approve,issue,issue_book.return FROM student inner join issue_book ON student.username=issue_book.username inner join books ON issue_book.bid=books.bid WHERE issue_book.approve !='' and issue_book.approve !='Yes' ORDER BY `issue_book`.`return` DESC";
         $res=mysqli_query($db,$sql);
         }
 
@@ -235,7 +235,7 @@ th,td
         
         echo "<tr style='background-color: #6db6b9e6;'>";
         echo "<th>"; echo "Username";  echo "</th>";
-        echo "<th>"; echo "Roll No";  echo "</th>";
+        echo "<th>"; echo "User ID";  echo "</th>";
         echo "<th>"; echo "BID";  echo "</th>";
         echo "<th>"; echo "Book Name";  echo "</th>";
         echo "<th>"; echo "Authors Name";  echo "</th>";
@@ -253,7 +253,7 @@ th,td
       {
         echo "<tr>";
           echo "<td>"; echo $row['username']; echo "</td>";
-          echo "<td>"; echo $row['roll']; echo "</td>";
+          echo "<td>"; echo $row['user_id']; echo "</td>";
           echo "<td>"; echo $row['bid']; echo "</td>";
           echo "<td>"; echo $row['name']; echo "</td>";
           echo "<td>"; echo $row['authors']; echo "</td>";

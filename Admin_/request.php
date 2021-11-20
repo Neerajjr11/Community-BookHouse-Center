@@ -158,7 +158,7 @@
 	
 	if(isset($_SESSION['login_user']))
 	{
-		$sql= "SELECT student.username,roll,books.bid,name,authors,edition,status FROM student inner join issue_book ON student.username=issue_book.username inner join books ON issue_book.bid=books.bid WHERE issue_book.approve =''";
+		$sql= "SELECT student.username,user_id,books.bid,name,authors,edition,status FROM student inner join issue_book ON student.username=issue_book.username inner join books ON issue_book.bid=books.bid WHERE issue_book.approve =''";
 		$res= mysqli_query($db,$sql);
 
 		if(mysqli_num_rows($res)==0)
@@ -174,7 +174,7 @@
 				//Table header
 				
 				echo "<th>"; echo "Username";  echo "</th>";
-				echo "<th>"; echo "Roll No";  echo "</th>";
+				echo "<th>"; echo "User ID";  echo "</th>";
 				echo "<th>"; echo "BID";  echo "</th>";
 				echo "<th>"; echo "Book Name";  echo "</th>";
 				echo "<th>"; echo "Authors Name";  echo "</th>";
@@ -187,7 +187,7 @@
 			{
 				echo "<tr>";
 				echo "<td>"; echo $row['username']; echo "</td>";
-				echo "<td>"; echo $row['roll']; echo "</td>";
+				echo "<td>"; echo $row['user_id']; echo "</td>";
 				echo "<td>"; echo $row['bid']; echo "</td>";
 				echo "<td>"; echo $row['name']; echo "</td>";
 				echo "<td>"; echo $row['authors']; echo "</td>";

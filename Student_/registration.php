@@ -39,7 +39,7 @@
           <input class="form-control" type="text" name="last" placeholder="Last Name" required=""> <br>
           <input class="form-control" type="text" name="username" placeholder="Username" required=""> <br>
           <input class="form-control" type="password" name="password" placeholder="Password" required=""> <br>
-          <input class="form-control" type="text" name="roll" placeholder="Roll No" required=""><br>
+          <input class="form-control" type="text" name="user_id" placeholder="User ID" required=""><br>
           <input class="form-control" type="text" name="email" placeholder="Email" required=""><br>
           <input class="form-control" type="text" name="contact" placeholder="Phone No" required=""><br>
 
@@ -68,7 +68,7 @@
         }
         if($count==0)
         {
-          mysqli_query($db,"INSERT INTO `STUDENT` VALUES('$_POST[first]', '$_POST[last]', '$_POST[username]', '$_POST[password]', '$_POST[roll]', '$_POST[email]', '$_POST[contact]', 'p.jpg');");
+          mysqli_query($db,"INSERT INTO `STUDENT` VALUES('$_POST[first]', '$_POST[last]', '$_POST[username]', '$_POST[password]', '$_POST[user_id]', '$_POST[email]', '$_POST[contact]', 'p.jpg');");
         ?>
           <script type="text/javascript">
            alert("Registration successful");

@@ -157,7 +157,7 @@ th,td
 
       if(isset($_SESSION['login_user']))
       {
-        $sql="SELECT student.username,roll,books.bid,name,authors,edition,issue,issue_book.return FROM student inner join issue_book ON student.username=issue_book.username inner join books ON issue_book.bid=books.bid WHERE issue_book.username ='$_SESSION[login_user]' and issue_book.approve !='' ORDER BY `issue_book`.`return` ASC";
+        $sql="SELECT student.username,user_id,books.bid,name,authors,edition,issue,issue_book.return FROM student inner join issue_book ON student.username=issue_book.username inner join books ON issue_book.bid=books.bid WHERE issue_book.username ='$_SESSION[login_user]' and issue_book.approve !='' ORDER BY `issue_book`.`return` ASC";
         $res=mysqli_query($db,$sql);
         
         
@@ -166,7 +166,7 @@ th,td
         
         echo "<tr style='background-color: #6db6b9e6;'>";
         echo "<th>"; echo "Username";  echo "</th>";
-        echo "<th>"; echo "Roll No";  echo "</th>";
+        echo "<th>"; echo "User ID";  echo "</th>";
         echo "<th>"; echo "BID";  echo "</th>";
         echo "<th>"; echo "Book Name";  echo "</th>";
         echo "<th>"; echo "Authors Name";  echo "</th>";
@@ -184,7 +184,7 @@ th,td
        
         echo "<tr>";
           echo "<td>"; echo $row['username']; echo "</td>";
-          echo "<td>"; echo $row['roll']; echo "</td>";
+          echo "<td>"; echo $row['user_id']; echo "</td>";
           echo "<td>"; echo $row['bid']; echo "</td>";
           echo "<td>"; echo $row['name']; echo "</td>";
           echo "<td>"; echo $row['authors']; echo "</td>";

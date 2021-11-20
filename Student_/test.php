@@ -48,7 +48,7 @@ if(isset($_POST['submit']))
         echo "<th>";  echo "Edition" ;echo "</th>";
         echo "<th>";  echo "Status" ;echo "</th>";
         echo "<th>";  echo "Quantity" ;echo "</th>";
-        echo "<th>";  echo "Department" ;echo "</th>";
+        echo "<th>";  echo "Category" ;echo "</th>";
     echo"</tr>"; 
     while($row=mysqli_fetch_assoc($q))
       {
@@ -59,7 +59,7 @@ if(isset($_POST['submit']))
         echo "<td>"; echo $row['edition']; echo "</td>";
         echo "<td>"; echo $row['status']; echo "</td>";
         echo "<td>"; echo $row['quantity']; echo "</td>";
-        echo "<td>"; echo $row['department']; echo "</td>";
+        echo "<td>"; echo $row['category']; echo "</td>";
 
         echo "</tr>";
       }
@@ -80,7 +80,7 @@ else
         echo "<th>";  echo "Edition" ;echo "</th>";
         echo "<th>";  echo "Status" ;echo "</th>";
         echo "<th>";  echo "Quantity" ;echo "</th>";
-        echo "<th>";  echo "Department" ;echo "</th>";
+        echo "<th>";  echo "Category" ;echo "</th>";
     echo"</tr>"; 
     while($row=mysqli_fetch_assoc($res))
       {
@@ -91,7 +91,7 @@ else
         echo "<td>"; echo $row['edition']; echo "</td>";
         echo "<td>"; echo $row['status']; echo "</td>";
         echo "<td>"; echo $row['quantity']; echo "</td>";
-        echo "<td>"; echo $row['department']; echo "</td>";
+        echo "<td>"; echo $row['category']; echo "</td>";
 
         echo "</tr>";
       } 

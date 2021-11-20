@@ -138,7 +138,7 @@ function closeNav() {
 
 		if(isset($_POST['submit']))
 		{
-			$q=mysqli_query($db,"SELECT first,last,username,roll,email,contact FROM `student` where username like '%$_POST[search]%' ");
+			$q=mysqli_query($db,"SELECT first,last,username,user_id,email,contact FROM `student` where username like '%$_POST[search]%' ");
 
 			if(mysqli_num_rows($q)==0)
 			{
@@ -152,7 +152,7 @@ function closeNav() {
 				echo "<th>"; echo "First Name";	echo "</th>";
 				echo "<th>"; echo "Last Name";  echo "</th>";
 				echo "<th>"; echo "Username";  echo "</th>";
-				echo "<th>"; echo "Roll";  echo "</th>";
+				echo "<th>"; echo "User ID";  echo "</th>";
 				echo "<th>"; echo "Email";  echo "</th>";
 				echo "<th>"; echo "Contact";  echo "</th>";
 				
@@ -164,7 +164,7 @@ function closeNav() {
 				echo "<td>"; echo $row['first']; echo "</td>";
 				echo "<td>"; echo $row['last']; echo "</td>";
 				echo "<td>"; echo $row['username']; echo "</td>";
-				echo "<td>"; echo $row['roll']; echo "</td>";
+				echo "<td>"; echo $row['user_id']; echo "</td>";
 				echo "<td>"; echo $row['email']; echo "</td>";
 				echo "<td>"; echo $row['contact']; echo "</td>";
 
@@ -176,7 +176,7 @@ function closeNav() {
 			/*if button is not pressed.*/
 		else
 		{
-			$res=mysqli_query($db,"SELECT first,last,username,roll,email,contact FROM `student`;");
+			$res=mysqli_query($db,"SELECT first,last,username,user_id,email,contact FROM `student`;");
 
 		echo "<table class='table table-bordered table-hover' >";
 			echo "<tr style='background-color: #6db6b9e6;'>";
@@ -184,7 +184,7 @@ function closeNav() {
 				echo "<th>"; echo "First Name";	echo "</th>";
 				echo "<th>"; echo "Last Name";  echo "</th>";
 				echo "<th>"; echo "Username";  echo "</th>";
-				echo "<th>"; echo "Roll";  echo "</th>";
+				echo "<th>"; echo "User ID";  echo "</th>";
 				echo "<th>"; echo "Email";  echo "</th>";
 				echo "<th>"; echo "Contact";  echo "</th>";
 			echo "</tr>";	
@@ -196,7 +196,7 @@ function closeNav() {
 				echo "<td>"; echo $row['first']; echo "</td>";
 				echo "<td>"; echo $row['last']; echo "</td>";
 				echo "<td>"; echo $row['username']; echo "</td>";
-				echo "<td>"; echo $row['roll']; echo "</td>";
+				echo "<td>"; echo $row['user_id']; echo "</td>";
 				echo "<td>"; echo $row['email']; echo "</td>";
 				echo "<td>"; echo $row['contact']; echo "</td>";
 

@@ -132,7 +132,7 @@
         <input type="text" name="edition" class="form-control" placeholder="Edition" required=""><br>
         <input type="text" name="status" class="form-control" placeholder="Status" required=""><br>
         <input type="text" name="quantity" class="form-control" placeholder="Quantity" required=""><br>
-        <input type="text" name="department" class="form-control" placeholder="Department" required=""><br>
+        <input type="text" name="category" class="form-control" placeholder="Category" required=""><br>
 
         <button style="text-align: center;" class="btn btn-default" type="submit" name="submit">ADD</button>
     </form>
@@ -142,7 +142,7 @@
     {
       if(isset($_SESSION['login_user']))
       {
-        mysqli_query($db,"INSERT INTO books VALUES ('$_POST[bid]', '$_POST[name]', '$_POST[authors]', '$_POST[edition]', '$_POST[status]', '$_POST[quantity]', '$_POST[department]') ;");
+        mysqli_query($db,"INSERT INTO books VALUES ('$_POST[bid]', '$_POST[name]', '$_POST[authors]', '$_POST[edition]', '$_POST[status]', '$_POST[quantity]', '$_POST[category]') ;");
         ?>
           <script type="text/javascript">
             alert("Book Added Successfully.");
