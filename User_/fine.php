@@ -125,7 +125,7 @@ function closeNav() {
 	<!--__________________________search bar________________________-->
 <div class="container">
 
-	<h2>List Of Students</h2>
+	<h2>List Of Users</h2>
 	<?php
 
 	$res=mysqli_query($db,"SELECT * FROM `fine` where username='$_SESSION[login_user]' ;");

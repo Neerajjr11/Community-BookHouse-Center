@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 20, 2021 at 06:45 PM
+-- Generation Time: Nov 23, 2021 at 05:43 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -94,7 +94,8 @@ INSERT INTO `comments` (`id`, `username`, `comment`) VALUES
 (17, 'Admin', 'Hi! which book do you need Afifa. Please let us know.'),
 (18, '', 'hello! '),
 (19, 'Promi', 'Hi! which book do you need Afifa. Please let us know.'),
-(20, 'Admin', 'hello');
+(20, 'Admin', 'hello'),
+(21, '', 'hello');
 
 -- --------------------------------------------------------
 
@@ -148,10 +149,10 @@ INSERT INTO `issue_book` (`username`, `bid`, `approve`, `issue`, `return`) VALUE
 -- --------------------------------------------------------
 
 --
--- Table structure for table `student`
+-- Table structure for table `user`
 --
 
-CREATE TABLE `student` (
+CREATE TABLE `user` (
   `first` varchar(100) NOT NULL,
   `last` varchar(100) NOT NULL,
   `username` varchar(100) NOT NULL,
@@ -163,10 +164,10 @@ CREATE TABLE `student` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `student`
+-- Dumping data for table `user`
 --
 
-INSERT INTO `student` (`first`, `last`, `username`, `password`, `user_id`, `email`, `contact`, `pic`) VALUES
+INSERT INTO `user` (`first`, `last`, `username`, `password`, `user_id`, `email`, `contact`, `pic`) VALUES
 ('Afia', 'Abida', 'Promi', '111111', 1, 'afia1@gmail.com', '000000000', '7996_3d_modeling_5.jpg'),
 ('sanzida', 'mou', 'Mim', '555555', 324, 'mim@gmail.com', '53454', 'p.jpg'),
 ('Mr.', 'Rahman', 'Rahman', '212324', 1510016, 'samiarahman@gmail.com', '123456', 'p.jpg'),
@@ -204,7 +205,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

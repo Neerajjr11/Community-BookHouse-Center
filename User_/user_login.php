@@ -7,7 +7,7 @@
 <html>
 <head>
 
-  <title>Student Login</title>
+  <title>User Login</title>
   <link rel="stylesheet" type="text/css" href="style.css">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -54,7 +54,7 @@
     if(isset($_POST['submit']))
     {
       $count=0;
-      $res=mysqli_query($db,"SELECT * FROM `student` WHERE username='$_POST[username]' && password='$_POST[password]';");
+      $res=mysqli_query($db,"SELECT * FROM `user` WHERE username='$_POST[username]' && password='$_POST[password]';");
       
       $row= mysqli_fetch_assoc($res);
       $count=mysqli_num_rows($res);

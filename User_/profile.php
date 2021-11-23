@@ -31,7 +31,7 @@
  						</script>
  					<?php
  				}
- 				$q=mysqli_query($db,"SELECT * FROM student where username='$_SESSION[login_user]' ;");
+ 				$q=mysqli_query($db,"SELECT * FROM user where username='$_SESSION[login_user]' ;");
  			?>
  			<h2 style="text-align: center;">My Profile</h2>
 

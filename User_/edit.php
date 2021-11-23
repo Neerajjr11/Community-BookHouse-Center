@@ -28,7 +28,7 @@
 	<h2 style="text-align: center;color: #fff;">Edit Information</h2>
 	<?php
 		
-		$sql = "SELECT * FROM student WHERE username='$_SESSION[login_user]'";
+		$sql = "SELECT * FROM user WHERE username='$_SESSION[login_user]'";
 		$result = mysqli_query($db,$sql) or die (mysql_error());
 
 		while ($row = mysqli_fetch_assoc($result)) 
@@ -90,7 +90,7 @@
 			$contact=$_POST['contact'];
 			$pic=$_FILES['file']['name'];
 
-			$sql1= "UPDATE student SET pic='$pic', first='$first', last='$last', username='$username', password='$password', email='$email', contact='$contact' WHERE username='".$_SESSION['login_user']."';";
+			$sql1= "UPDATE user SET pic='$pic', first='$first', last='$last', username='$username', password='$password', email='$email', contact='$contact' WHERE username='".$_SESSION['login_user']."';";
 
 			if(mysqli_query($db,$sql1))
 			{

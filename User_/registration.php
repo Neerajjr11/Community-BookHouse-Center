@@ -7,7 +7,7 @@
 <html>
 <head>
 
-  <title>Student Registration</title>
+  <title>User Registration</title>
   <link rel="stylesheet" type="text/css" href="style.css">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -56,7 +56,7 @@
       {
         $count=0;
 
-        $sql="SELECT username from `student`";
+        $sql="SELECT username from `user`";
         $res=mysqli_query($db,$sql);
 
         while($row=mysqli_fetch_assoc($res))
@@ -68,7 +68,7 @@
         }
         if($count==0)
         {
-          mysqli_query($db,"INSERT INTO `STUDENT` VALUES('$_POST[first]', '$_POST[last]', '$_POST[username]', '$_POST[password]', '$_POST[user_id]', '$_POST[email]', '$_POST[contact]', 'p.jpg');");
+          mysqli_query($db,"INSERT INTO `USER` VALUES('$_POST[first]', '$_POST[last]', '$_POST[username]', '$_POST[password]', '$_POST[user_id]', '$_POST[email]', '$_POST[contact]', 'p.jpg');");
         ?>
           <script type="text/javascript">
            alert("Registration successful");

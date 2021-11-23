@@ -55,7 +55,7 @@
             {   ?>
               <ul class="nav navbar-nav navbar-right">
 
-                <li><a href="student_login.php"><span class="glyphicon glyphicon-log-in"> LOGIN</span></a></li>
+                <li><a href="user_login.php"><span class="glyphicon glyphicon-log-in"> LOGIN</span></a></li>
                 
                 <li><a href="registration.php"><span class="glyphicon glyphicon-user"> SIGN UP</span></a></li>
               </ul>
