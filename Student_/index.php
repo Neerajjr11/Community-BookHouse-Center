@@ -76,7 +76,7 @@
 			<br><br><br>
 			<div class="box">
 				<br><br><br><br>
-				<h1 style="text-align: center; font-size: 35px;">Welcom to the Bookhouse</h1><br><br>
+				<h1 style="text-align: center; font-size: 35px;">Welcome to the Bookhouse</h1><br><br>
 				<h1 style="text-align: center;font-size: 25px;">Open at all times </h1><br>
 				<h1 style="text-align: center;font-size: 25px;">A writer only begins a book. <br>
 				A reader finishes it.  </h1><br>
