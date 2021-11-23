@@ -16,10 +16,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
     <style type="text/css">
     	body
-    	{
-    		background-image: url("images/66.jpg");
-    		background-repeat: no-repeat;
-    	}
     	.wrapper
     	{
     		padding: 10px;
@@ -44,12 +40,13 @@
 
     </style>
 </head>
-<body>
+<body style="background-color: #674ea7;">
 
 	<div class="wrapper">
+		<h1>FEEDBACK</h1>
 		<h4>If you have any suggesions or questions please comment below.</h4>
 		<form style="" action="" method="post">
-			<input class="form-control" type="text" name="comment" placeholder="Write something..."><br>	
+			<input class="form-control" type="text" name="comment" placeholder="Write here..."><br>	
 			<input class="btn btn-default" type="submit" name="submit" value="Comment" style="width: 100px; height: 35px;">		
 		</form>
 	

@@ -13,6 +13,7 @@
 			padding-left: 850px;
 		}
 		body {
+			background-color: #3d85c6;
   font-family: "Lato", sans-serif;
   transition: background-color .5s;
 }

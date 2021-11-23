@@ -31,7 +31,7 @@
 	<div class="wrapper">
 		<header>
 		<div class="logo">
-			<img src="images/9.png">
+			<img src="images/88.jpeg" width="100" height="100">
 			<h1 style="color: white;">COMMUNITY BOOKHOUSE CENTER</h1>
 		</div>
 

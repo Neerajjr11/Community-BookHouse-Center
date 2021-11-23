@@ -24,8 +24,7 @@ c<?php
 		}
 		
 		body {
-			background-image: url("images/aa.jpg");
-			background-repeat: no-repeat;
+			background-color: #3d85c6;
   	font-family: "Lato", sans-serif;
   	transition: background-color .5s;
 }

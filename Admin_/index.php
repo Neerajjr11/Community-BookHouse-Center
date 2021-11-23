@@ -32,7 +32,7 @@
 		<header>
 		<div class="logo">
 			<img src="images/9.png">
-			<h1 style="color: white;">COMMUNITY BOOK HOUSE CENTER</h1>
+			<h1 style="color: white;">COMMUNITY BOOKHOUSE CENTER</h1>
 		</div>
 
 		<?php

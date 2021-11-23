@@ -23,7 +23,7 @@
 
 	</style>
 </head>
-<body style="background-color: #004528;">
+<body style="background-color: #3d85c6;">
 
 	<h2 style="text-align: center;color: #fff;">Edit Information</h2>
 	<?php
