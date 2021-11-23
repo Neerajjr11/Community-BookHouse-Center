@@ -157,7 +157,7 @@
 	
 	if(isset($_SESSION['login_user']))
 	{
-		$sql= "SELECT student.username,user_id,books.bid,name,authors,edition,status FROM student inner join issue_book ON student.username=issue_book.username inner join books ON issue_book.bid=books.bid WHERE issue_book.approve =''";
+		$sql= "SELECT user.username,user_id,books.bid,name,authors,edition,status FROM user inner join issue_book ON user.username=issue_book.username inner join books ON issue_book.bid=books.bid WHERE issue_book.approve =''";
 		$res= mysqli_query($db,$sql);
 
 		if(mysqli_num_rows($res)==0)

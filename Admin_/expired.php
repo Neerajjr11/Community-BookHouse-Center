@@ -214,18 +214,18 @@ th,td
         if(isset($_POST['submit2']))
         {
           
-        $sql="SELECT student.username,user_id,books.bid,name,authors,edition,approve,issue,issue_book.return FROM student inner join issue_book ON student.username=issue_book.username inner join books ON issue_book.bid=books.bid WHERE issue_book.approve ='$ret' ORDER BY `issue_book`.`return` DESC";
+        $sql="SELECT user.username,user_id,books.bid,name,authors,edition,approve,issue,issue_book.return FROM user inner join issue_book ON user.username=issue_book.username inner join books ON issue_book.bid=books.bid WHERE issue_book.approve ='$ret' ORDER BY `issue_book`.`return` DESC";
         $res=mysqli_query($db,$sql);
 
         }
         else if(isset($_POST['submit3']))
         {
-        $sql="SELECT student.username,user_id,books.bid,name,authors,edition,approve,issue,issue_book.return FROM student inner join issue_book ON student.username=issue_book.username inner join books ON issue_book.bid=books.bid WHERE issue_book.approve ='$exp' ORDER BY `issue_book`.`return` DESC";
+        $sql="SELECT user.username,user_id,books.bid,name,authors,edition,approve,issue,issue_book.return FROM user inner join issue_book ON user.username=issue_book.username inner join books ON issue_book.bid=books.bid WHERE issue_book.approve ='$exp' ORDER BY `issue_book`.`return` DESC";
         $res=mysqli_query($db,$sql);
         }
         else
         {
-        $sql="SELECT student.username,user_id,books.bid,name,authors,edition,approve,issue,issue_book.return FROM student inner join issue_book ON student.username=issue_book.username inner join books ON issue_book.bid=books.bid WHERE issue_book.approve !='' and issue_book.approve !='Yes' ORDER BY `issue_book`.`return` DESC";
+        $sql="SELECT user.username,user_id,books.bid,name,authors,edition,approve,issue,issue_book.return FROM user inner join issue_book ON user.username=issue_book.username inner join books ON issue_book.bid=books.bid WHERE issue_book.approve !='' and issue_book.approve !='Yes' ORDER BY `issue_book`.`return` DESC";
         $res=mysqli_query($db,$sql);
         }
 

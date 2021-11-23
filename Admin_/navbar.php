@@ -33,8 +33,8 @@
                   
                   <li><a href="profile.php">PROFILE</a></li>
                 
-                  <li><a href="student.php">
-                    STUDENT-INFORMATION
+                  <li><a href="user.php">
+                    USER-INFORMATION
                   </a></li>
                   <li><a href="fine.php">FINES</a></li>
                 </ul>
