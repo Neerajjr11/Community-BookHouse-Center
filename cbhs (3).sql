@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 23, 2021 at 05:43 PM
+-- Generation Time: Nov 24, 2021 at 01:12 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -43,9 +43,8 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id`, `first`, `last`, `username`, `password`, `email`, `contact`, `pic`) VALUES
-(1, 'Mr.', 'Abdul', 'Hamid', '123456', 'mr.hamid@gmail.com', '12345678', 'p.jpg'),
-(2, 'Nobonita', 'Das', 'Nobonita', '111111', 'nobonita@gmail.com', '012345678', '4881.jpg'),
-(3, 'Mr.', 'X', 'X', '222222', 'samiarahman@gmail.com', '133446557', 'p.jpg');
+(1, 'Kunal', 'Nayyar', 'Admin1', 'admin1', 'kunalnayyar@gmail.com', '9856432718', 'p.jpg'),
+(2, 'Ryan', 'Reynolds', 'Admin2', 'admin2', 'ryanreynolds@gmail.com', '9996432178', 'p.jpg');
 
 -- --------------------------------------------------------
 
@@ -68,9 +67,9 @@ CREATE TABLE `books` (
 --
 
 INSERT INTO `books` (`bid`, `name`, `authors`, `edition`, `status`, `quantity`, `category`) VALUES
-(1, 'Principal of electronics', 'V.K. Mehta, Rohit Mehta', '3rd', 'Available', 3, 'EEE'),
-(2, 'The Complete Reference C++', 'Herbert Schildt', '4th', 'Available', 4, 'CSE'),
-(3, 'Data Structure', 'Seymour Lipschutz', '4th', 'Available', 4, 'ECE');
+(1, 'Lord of The Rings Volume 1', 'J. R. R. Tolkien', '3rd', 'Available', 2, 'Fantasy Fiction'),
+(2, 'Harry Potter Half Blood Prince', 'J K Rowling', '4th', 'Available', 4, 'Fiction'),
+(3, 'The Martian\r\n', 'Andy Weir', '4th', 'Available', 4, 'Science Fiction');
 
 -- --------------------------------------------------------
 
@@ -89,13 +88,8 @@ CREATE TABLE `comments` (
 --
 
 INSERT INTO `comments` (`id`, `username`, `comment`) VALUES
-(5, 'Promi', 'hello!'),
-(16, 'Afifa', 'There is no books of ETE department.When will it be available?'),
-(17, 'Admin', 'Hi! which book do you need Afifa. Please let us know.'),
-(18, '', 'hello! '),
-(19, 'Promi', 'Hi! which book do you need Afifa. Please let us know.'),
-(20, 'Admin', 'hello'),
-(21, '', 'hello');
+(2, 'Admin', 'We don\'t have it currently but will add it as soon as possible. Thankyou'),
+(11, 'Rahul', 'Hi! do you have Lord of the Rings 2nd book?');
 
 -- --------------------------------------------------------
 
@@ -144,7 +138,8 @@ INSERT INTO `issue_book` (`username`, `bid`, `approve`, `issue`, `return`) VALUE
 ('Promi', 2, '<p style=\"color:yellow; background-color:green;\">RETURNED</p>', '2019-01-30', '2019-02-28'),
 ('Afifa', 1, '<p style=\"color:yellow; background-color:green;\">RETURNED</p>', '2019-04-20', '2019-05-20'),
 ('Afifa', 2, '<p style=\"color:yellow; background-color:green;\">RETURNED</p>', '2019-02-20', '2019-02-10'),
-('Afifa', 1, '', '', '');
+('Afifa', 1, '', '', ''),
+('Afifa', 3, '', '', '');
 
 -- --------------------------------------------------------
 
@@ -168,12 +163,9 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`first`, `last`, `username`, `password`, `user_id`, `email`, `contact`, `pic`) VALUES
-('Afia', 'Abida', 'Promi', '111111', 1, 'afia1@gmail.com', '000000000', '7996_3d_modeling_5.jpg'),
-('sanzida', 'mou', 'Mim', '555555', 324, 'mim@gmail.com', '53454', 'p.jpg'),
-('Mr.', 'Rahman', 'Rahman', '212324', 1510016, 'samiarahman@gmail.com', '123456', 'p.jpg'),
-('Sumaiya', 'Shimu', 'Shimu1', '987654', 1510052, 'shimu1@gmail.com', '1739000000', 'p.jpg'),
-('Suchana', 'Pramanik', 'Suchana', '121212', 1510047, 'suchana@gmail.com', '1739000000', 'p.jpg'),
-('Afifa ', 'Ashraf', 'Afifa', '121212', 1510047, 'afifa@gmail.com', '1739000001', 'p.jpg');
+('Afifa', 'Shimu', 'Afifa', 'afifa', 13, 'shimu1@gmail.com', '984531378', 'p.jpg'),
+('Mithun', 'Promi', 'Promi', 'promi', 12, 'promi@gmail.com', '896473217', 'p.jpg'),
+('Rahul', 'Shetty', 'Rahul', 'rahul', 11, 'rahul@gmail.com', '965348231', 'p.jpg');
 
 --
 -- Indexes for dumped tables
@@ -186,10 +178,28 @@ ALTER TABLE `admin`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `books`
+--
+ALTER TABLE `books`
+  ADD PRIMARY KEY (`bid`);
+
+--
 -- Indexes for table `comments`
 --
 ALTER TABLE `comments`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `fine`
+--
+ALTER TABLE `fine`
+  ADD KEY `fk_foreign_key_bid` (`bid`);
+
+--
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`username`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -205,7 +215,17 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `fine`
+--
+ALTER TABLE `fine`
+  ADD CONSTRAINT `fk_foreign_key_bid` FOREIGN KEY (`bid`) REFERENCES `books` (`bid`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
